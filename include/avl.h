@@ -25,7 +25,8 @@ private:
     Node* insert(Node* node, string value);
 
 public:
-    AVLTree();
+    myTree();
     void insert(string value);
+    int range (string val1, string val2);
 };
 #endif

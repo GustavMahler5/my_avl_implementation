@@ -2,7 +2,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
-#include "myAVL.h"
+#include "avl.h"
 
 using namespace std;
 
