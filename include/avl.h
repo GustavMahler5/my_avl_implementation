@@ -20,9 +20,15 @@ private:
     Node* root;
     int getHeight(Node* node);
     int getBalance(Node* node);
+    int updateHeight(Node* node);
+    int getSubtreeSize(Node* node);
+    int updateSubtreeSize(Node* node);
+    int checkBalance(Node* node);
     Node* rotateLeft(Node* x);
     Node* rotateRight(Node* y);
-    Node* insert(Node* node, string value);
+    Node* insertRecursive(string value, Node* currentNode);
+    int countLess(Node* node, string value);
+    int countLessEqual(Node* node, string value);
 
 public:
     myTree();
