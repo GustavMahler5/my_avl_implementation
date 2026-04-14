@@ -26,7 +26,7 @@ myTree::myTree() {
 }
 
 
-// Return the number of children and grandchildren + 1 (itself)
+// Return the number of children and grandchildren plus 1 (itself)
 int myTree::getSubtreeSize(Node* node) {
 	if (node == NULL) {
 		return 0;
@@ -62,7 +62,7 @@ int myTree::updateSubtreeSize(Node* node) {
 		return 0;
 	}
 
-	// Return the sum of the left and right children's subtrees + 1 (itself)
+	// Return the sum of the left and right children's subtrees plus 1 (itself)
 	node->subtreeSize = 1 + getSubtreeSize(node->left) + getSubtreeSize(node->right);
 	return node->subtreeSize;
 }
@@ -227,6 +227,9 @@ int myTree::range (string val1, string val2) {
 		greater = val1;
 	}
 
-	// Return all values less than or equal to the high range - all values less than the low range
+	/*
+	Return all values less than or equal to the high range minus all values less than the low range
+	This should give us the number of values in the tree that are between the two parameters, inclusive.
+	*/
 	return countLessEqual(root, greater) - countLess(root, lesser);
 }
